@@ -4,8 +4,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) {
-        String filePathName = "questions.csv";
-        try (BufferedWriter wr = new BufferedWriter(new FileWriter(filePathName))) {
+        try (BufferedWriter wr = new BufferedWriter(new FileWriter("questionsGeography.csv"))) {
             //geography
             wr.write("Which country is famous for the pyramids?,Egypt,Bulgaria,France,Russia");
             wr.newLine();
@@ -22,6 +21,9 @@ public class Main {
             wr.write("What do pandas eat?,Bamboo,Chicken,Snacks,Chocolate");
             wr.newLine();
             wr.write("What is the capital of Chile?,Santiago,Varna,Brazil,Mexico");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }try (BufferedWriter wr = new BufferedWriter(new FileWriter("questionsScience.csv"))) {
             wr.newLine();//science
             wr.write("Where are neurons located?,Brain,Legs,Nowhere,Arms");
             wr.newLine();
@@ -38,7 +40,10 @@ public class Main {
             wr.write("How do you spell the chemical element Astat?,At,As,Ta,Ast");
             wr.newLine();
             wr.write("What is the outside of the cell called?,Membrane,Core,Cytoplasm,DNA");
-            wr.newLine();//sports
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+             try (BufferedWriter wr = new BufferedWriter(new FileWriter("questionsSports.csv"))) {
             wr.write("Who is Neymar?,football player,basketball player,tennis player,programmer");
             wr.newLine();
             wr.write("What is the most popular sport in the world?,Football,Basketball,Tennis,Swimming");
