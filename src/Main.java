@@ -38,7 +38,7 @@ public class Main {
                     Collections.shuffle(shuffledQuestionsGeo);
                     for (int i = 0; i < shuffledQuestionsGeo.size(); i++) {
                         String[] question = shuffledQuestionsGeo.get(i);
-                        System.out.println("Question " + (i + 1) + ":");
+                        System.out.print("Question " + (i + 1) + ": ");
                         String questionText = question[0];
                         System.out.println(questionText);
                         ArrayList<String> answers = new ArrayList<>();
@@ -55,7 +55,9 @@ public class Main {
                         String selectedAnswer = answers.get(selectedAnswerIndex - 1);
                         String correctAnswer = question[1];
                         if (selectedAnswer.equals(correctAnswer)) {
+                            System.out.println();
                             System.out.println("Correct!");
+                            System.out.println();
                             score++;
                         } else {
                             System.out.println("Wrong answer. Game over!");
@@ -88,7 +90,9 @@ public class Main {
                         String selectedAnswer = answers.get(selectedAnswerIndex - 1);
                         String correctAnswer = question[1];
                         if (selectedAnswer.equals(correctAnswer)) {
+                            System.out.println();
                             System.out.println("Correct!");
+                            System.out.println();
                             score1++;
                         } else {
                             System.out.println("Wrong answer. Game over!");
@@ -121,7 +125,9 @@ public class Main {
                         String selectedAnswer = answers.get(selectedAnswerIndex - 1);
                         String correctAnswer = question[1];
                         if (selectedAnswer.equals(correctAnswer)) {
+                            System.out.println();
                             System.out.println("Correct!");
+                            System.out.println();
                             score2++;
                         } else {
                             System.out.println("Wrong answer. Game over!");
