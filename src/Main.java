@@ -21,9 +21,10 @@ public class Main {
         }
         return questions;
     }
+
     public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
-        System.out.println("Welcome to Quiz Game! Good luck!");
+        System.out.println("Welcome to Quiz Game!");
         System.out.println("1. Geography");
         System.out.println("2. Science");
         System.out.println("3. Sports");
@@ -32,7 +33,8 @@ public class Main {
         if (category > 0 || category < 4) {
             switch (category) {
                 case 1:
-                    int score = 0;
+                    System.out.println("Let's start Geography Quiz!");
+                    int score1 = 0;
                     ArrayList<String[]> questionsGeo = readQuestionsFromCSV("questionsGeography.csv");
                     ArrayList<String[]> shuffledQuestionsGeo = new ArrayList<>(questionsGeo);
                     Collections.shuffle(shuffledQuestionsGeo);
@@ -58,22 +60,23 @@ public class Main {
                             System.out.println();
                             System.out.println("Correct!");
                             System.out.println();
-                            score++;
+                            score1++;
                         } else {
                             System.out.println("Wrong answer. Game over!");
                             break;
                         }
                     }
-                    System.out.println("Quiz game over. Your score: " + score + ". Congrats!!!");
+                    System.out.println("Quiz game over. Your score1: " + score1 + ". ");
                     break;
                 case 2:
-                    int score1 = 0;
+                    System.out.println("Let's start Science Quiz!");
+                    int score2 = 0;
                     ArrayList<String[]> questionsScience = readQuestionsFromCSV("questionsScience.csv");
                     ArrayList<String[]> shuffledQuestionsScience = new ArrayList<>(questionsScience);
                     Collections.shuffle(shuffledQuestionsScience);
                     for (int i = 0; i < shuffledQuestionsScience.size(); i++) {
                         String[] question = shuffledQuestionsScience.get(i);
-                        System.out.println("Question " + (i + 1) + ":");
+                        System.out.print("Question " + (i + 1) + ": ");
                         String questionText = question[0];
                         System.out.println(questionText);
                         ArrayList<String> answers = new ArrayList<>();
@@ -93,22 +96,23 @@ public class Main {
                             System.out.println();
                             System.out.println("Correct!");
                             System.out.println();
-                            score1++;
+                            score2++;
                         } else {
                             System.out.println("Wrong answer. Game over!");
                             break;
                         }
                     }
-                    System.out.println("Quiz game over. Your score: " + score1 + ". Congrats!!!");
+                    System.out.println("Quiz game over. Your score1: " + score2 + ".");
                     break;
                 case 3:
-                    int score2 = 0;
+                    System.out.println("Let's start Sport Quiz!");
+                    int score3 = 0;
                     ArrayList<String[]> questionsSports = readQuestionsFromCSV("questionsSports.csv");
                     ArrayList<String[]> shuffledQuestions = new ArrayList<>(questionsSports);
                     Collections.shuffle(shuffledQuestions);
                     for (int i = 0; i < shuffledQuestions.size(); i++) {
                         String[] question = shuffledQuestions.get(i);
-                        System.out.println("Question " + (i + 1) + ":");
+                        System.out.print("Question " + (i + 1) + ": ");
                         String questionText = question[0];
                         System.out.println(questionText);
                         ArrayList<String> answers = new ArrayList<>();
@@ -128,13 +132,13 @@ public class Main {
                             System.out.println();
                             System.out.println("Correct!");
                             System.out.println();
-                            score2++;
+                            score3++;
                         } else {
                             System.out.println("Wrong answer. Game over!");
                             break;
                         }
                     }
-                    System.out.println("Quiz game over. Your score: " + score2 + ". Congrats!!!");
+                    System.out.println("Quiz game over. Your score1: " + score3 + ". ");
                     break;
                 default:
                     System.out.println("Invalid choice!");
