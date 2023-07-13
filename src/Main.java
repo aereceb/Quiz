@@ -61,7 +61,7 @@ public class Main {
                 System.out.println("Invalid answer!");
             }
         }
-        System.out.println("Quiz game ended. Your score is " + score + "." + "Congrats!");
+        System.out.println("Quiz game ended. Your score is " + score + "." + " Congrats!");
     }
 
     public static void main(String[] args) throws IOException {
