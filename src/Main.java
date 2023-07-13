@@ -65,7 +65,7 @@ public class Main {
                             break;
                         }
                     }
-                    System.out.println("Quiz game over. Your score1: " + score1 + ". ");
+                    System.out.println("Quiz game over. Your score: " + score1 + ". ");
                     break;
                 case 2:
                     System.out.println("Let's start Science Quiz!");
@@ -101,7 +101,7 @@ public class Main {
                             break;
                         }
                     }
-                    System.out.println("Quiz game over. Your score1: " + score2 + ".");
+                    System.out.println("Quiz game over. Your score: " + score2 + ".");
                     break;
                 case 3:
                     System.out.println("Let's start Sport Quiz!");
@@ -137,7 +137,7 @@ public class Main {
                             break;
                         }
                     }
-                    System.out.println("Quiz game over. Your score1: " + score3 + ". ");
+                    System.out.println("Quiz game over. Your score: " + score3 + ". ");
                     break;
                 default:
                     System.out.println("Invalid choice!");
