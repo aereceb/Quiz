@@ -16,9 +16,8 @@ public class Main {
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
-        } finally {
-            reader.close();
         }
+            reader.close();
         return questions;
     }
 
