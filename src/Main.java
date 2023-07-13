@@ -45,7 +45,7 @@ public class Main {
             }
             System.out.print("Answer:");
             int selectedAnswerIndex = input.nextInt();
-            if (selectedAnswerIndex < 5 && selectedAnswerIndex > 0) {
+            if (selectedAnswerIndex < 5 && selectedAnswerIndex > 0 ) {
                 String selectedAnswer = answers.get(selectedAnswerIndex - 1);
                 String correctAnswer = question[1];
                 if (selectedAnswer.equals(correctAnswer)) {
